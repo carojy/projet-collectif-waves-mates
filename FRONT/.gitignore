@@ -1,12 +1,12 @@
 *.iml
 .gradle/*
-gradle/libs.versions.toml
-app/build.gradle.kts
-/local.properties
+gradle/*
 .idea/*
-.DS_Store
+/local.properties
 /build
 /captures
 .externalNativeBuild
 .cxx
+app/build.gradle.kts
 local.properties
+.DS_Store
