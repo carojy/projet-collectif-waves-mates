@@ -4,7 +4,7 @@ Projet collectif réalisé dans le cadre de ma formation Concepteur Développeur
 Équipe de 3 personnes - 8 jours. 
 
 ### Projet
-Application mobile référençant une liste des meilleurs spots de surfs autor du monde.
+Application mobile référençant la liste des meilleurs spots de surfs autor du monde.
 
 ### Technos
 FRONT : Kotlin 
