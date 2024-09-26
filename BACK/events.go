@@ -6,16 +6,13 @@ import (
 	"github.com/gorilla/mux"
 )
 
-// Définition des structures Go pour les données JSON
 
-// Thumbnail représente les différentes tailles de vignettes d'une photo
 type Thumbnail struct {
 	URL    string `json:"url"`
 	Width  int    `json:"width"`
 	Height int    `json:"height"`
 }
 
-// Photo contient les informations d'une photo et ses vignettes
 type Photo struct {
 	ID         string              `json:"id"`
 	Width      int                 `json:"width"`
@@ -27,7 +24,6 @@ type Photo struct {
 	Thumbnails map[string]Thumbnail `json:"thumbnails"`
 }
 
-// Fields contient les champs de chaque enregistrement
 type Fields struct {
 	MagicSeaweedLink        string   `json:"Magic Seaweed Link"`
 	Photos                  []Photo  `json:"Photos"`
@@ -42,7 +38,7 @@ type Fields struct {
 	Address                 string   `json:"Address"`
 }
 
-// Event représente chaque enregistrement avec son ID, l'heure de création et les champs
+// // Event represents each record with its ID, creation time and fields
 type Event struct {
 	ID          string `json:"id"`
 	CreatedTime string `json:"createdTime"`
@@ -178,7 +174,7 @@ var events = AllEvents{
 				},
 				Geocode:                 "eyJpIjoiU3VwZXJ0dWJlcywgSmVmZnJleXMgQmF5LCBTb3V0aCBBZnJpY2EiLCJvIjp7InN0YXR1cyI6Ik9LIiwiZm9ybWF0dGVkQWRkcmVzcyI6IjEyIFBlcHBlciBTdCwgRmVycmVpcmEgVG93biwgSmVmZnJleXMgQmF5LCA2MzMwLCBTb3V0aCBBZnJpY2EiLCJsYXQiOi0zNC4wMzE3ODMsImxuZyI6MjQuOTMxNTk0MDAwMDAwMDJ9LCJlIjoxNTM1MzA3MDI3OTc1fQ==",
 				Influencers:             []string{"recG8bPaumZkCk66b", "recPdVWkPoHCQawnl", "recrP1aupHoWQxMe0"},
-				SurfBreak:               []string{"Point Break"},
+				SurfBreak:               []string{"Shark Bay"},
 				PeakSurfSeasonBegins:    "2024-08-01",
 				DestinationStateCountry: "Jeffreys Bay, South Africa",
 				PeakSurfSeasonEnds:      "2024-10-09",
@@ -191,13 +187,11 @@ var events = AllEvents{
 }
 
 
-//EVENTS
 func getEvents(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(events)
 }
 
-//ONE EVENT
 func getOneEvent(w http.ResponseWriter, r *http.Request) {
 	eventID := mux.Vars(r)["id"]
 

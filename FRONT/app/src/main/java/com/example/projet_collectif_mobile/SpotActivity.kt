@@ -6,8 +6,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class SpotActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,12 +13,10 @@ class SpotActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_spot)
 
-
-        // Récupère nom et location spot depuis intent
+        // Get name and spot location from intent
         val spotName = intent.getStringExtra("SPOT_NAME")
         val spotLocation = intent.getStringExtra("SPOT_LOCATION")
 
-        // Affiche details
         val nameTextView = findViewById<TextView>(R.id.spot_activity_name)
         val locationTextView = findViewById<TextView>(R.id.spot_activity_location)
 
@@ -32,6 +28,5 @@ class SpotActivity : AppCompatActivity() {
             finish()
             startActivity(Intent(applicationContext, MainActivity::class.java))
         }
-
     }
 }

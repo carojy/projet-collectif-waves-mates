@@ -6,13 +6,10 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-
-	// "encoding/json"
-	// "io/ioutil"
 )
 
 func homeLink(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Salut la compagnie !")
+	fmt.Fprintf(w, "Salut les surfers !")
 	log.Println("homeLink est appelé")
 }
 
