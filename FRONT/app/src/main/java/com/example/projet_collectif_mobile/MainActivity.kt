@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -15,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.example.projet_collectif_mobile.models.SurfSpot
 import com.example.projet_collectif_mobile.ui.screens.SpotsViewModel
+import com.squareup.picasso.Picasso
 
 class MainActivity : AppCompatActivity() {
     // Use the viewModels method to instantiate the ViewModel
@@ -44,9 +46,11 @@ class MainActivity : AppCompatActivity() {
 
                     val spotNameTextView = view.findViewById<TextView>(R.id.spot_name)
                     val spotLocationTextView = view.findViewById<TextView>(R.id.spot_location)
+                    //val spotPictureView = view.findViewById<ImageView>(R.id.spot_img)
 
                     spotNameTextView.text = spot?.surfBreak?.joinToString(", ")
                     spotLocationTextView.text = spot?.address
+                    //Picasso.get().load(spot?.picture).into(spotPictureView)
 
 
                     val button = view.findViewById<Button>(R.id.spot_btn)
