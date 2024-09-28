@@ -14,6 +14,6 @@ BACK : Go
 Les activités du Front sont relié au Back par une Api créée en Go.
 
 <div >
-	<kbd><img width="200" src="https://github.com/carojy/projet-collectif-waves-mates/img/waves_mates_home.png" alt="HTML" title="HTML"/></kbd>&nbsp;
+	<kbd><img width="200" src="img/waves_mates_home.png" alt="HTML" title="HTML"/></kbd>&nbsp;
 	</kbd>
 </div>
