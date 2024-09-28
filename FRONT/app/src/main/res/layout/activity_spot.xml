@@ -16,19 +16,20 @@
         android:id="@+id/spot_activity_name"
         android:textSize="45sp"
         android:textAlignment="center"
+        android:layout_marginTop="35dp"
         android:textColor="@color/backgroundText"/>
     
     <ImageView
-        android:layout_width="280sp"
+        android:layout_width="320sp"
         android:layout_height="280sp"
         android:src="@drawable/spot_picture"
-        android:layout_margin="5sp"/>
+        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spot_activity_location"
-        android:textSize="27sp"
+        android:textSize="17sp"
         android:textAlignment="center"
         android:textColor="@color/backgroundText"
         android:layout_margin="5sp"/>
@@ -60,7 +61,7 @@
         android:textColor="@color/backgroundText"
         android:background="@color/boxComponentBackground"
         android:padding="5sp"
-        android:layout_marginTop="17sp"
+        android:layout_marginTop="27sp"
         android:layout_marginBottom="18sp"/>
     
     <Button
@@ -70,6 +71,7 @@
         android:textAlignment="center"
         android:text="Retour à la liste"
         android:textSize="18sp"
+        android:layout_marginTop="20sp"
         android:textColor="@color/buttonText"
         android:backgroundTint="@color/buttonBackground"/>
 </LinearLayout>

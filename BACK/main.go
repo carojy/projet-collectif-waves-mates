@@ -9,14 +9,14 @@ import (
 )
 
 func homeLink(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Salut les surfers !")
+	fmt.Fprintf(w, "Hello surfers !")
 	log.Println("homeLink est appelé")
 }
 
 func main() {
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/", homeLink)
-	router.HandleFunc("/events", getEvents)
+	router.HandleFunc("/events", getAllEvents)
 	router.HandleFunc("/simplespots", getSimpleSpotsList).Methods("GET")
 	router.HandleFunc("/events/{id}", getOneEvent).Methods("GET")
 	router.HandleFunc("/simplespots/{id}", getSimpleSpot).Methods("GET")
